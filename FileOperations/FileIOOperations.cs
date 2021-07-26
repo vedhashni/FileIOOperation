@@ -55,5 +55,27 @@ namespace FileOperations
                 Console.WriteLine(ex.Message);
             }
         }
+
+        public static void ReadAllTextInFile()
+        {
+            try
+            {
+                string text;
+                string path = @"C:\Users\ven\source\repos\FileOperations\FileOperations\TextFile.txt";
+                text = File.ReadAllText(path);
+                if (text.Length != 0)
+                {
+                    Console.WriteLine(text);
+                }
+                else
+                {
+                    Console.WriteLine("File does not contain text");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
     }
 }

@@ -25,6 +25,10 @@ namespace FileOperations
                     FileIOOperations.ReadAllLinesInFile();
                     break;
 
+                case 3:
+                    FileIOOperations.ReadAllTextInFile();
+                    break;
+
                 default:
                     break;
 
