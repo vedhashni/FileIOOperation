@@ -37,6 +37,10 @@ namespace FileOperations
                     FileIOOperations.DeleteFile();
                     break;
 
+                case 6:
+                    FileIOOperations.ReadFromStreamReader();
+                    break;
+
                 default:
                     break;
 

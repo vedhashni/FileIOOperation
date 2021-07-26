@@ -118,5 +118,27 @@ namespace FileOperations
                 Console.WriteLine(ex.Message);
             }
         }
+
+        public static void ReadFromStreamReader()
+        {
+            string streamReadPath = @"C:\Users\ven\source\repos\FileOperations\FileOperations\TextFile.txt";
+            try
+            {
+                using (StreamReader reader = new StreamReader(streamReadPath))
+                {
+                    string line;
+                    //Reading file from stream reader class
+                    while ((line = reader.ReadLine()) != null)
+                    {
+
+                        Console.WriteLine(line);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
     }
 }
