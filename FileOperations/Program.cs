@@ -29,6 +29,10 @@ namespace FileOperations
                     FileIOOperations.ReadAllTextInFile();
                     break;
 
+                case 4:
+                    FileIOOperations.CopyFile();
+                    break;
+
                 default:
                     break;
 

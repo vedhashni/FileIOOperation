@@ -10,6 +10,8 @@ namespace FileOperations
     /// <summary>
     /// Checking File exists or not
     /// Read All lines in the File
+    /// Read All Text in File
+    /// Copy a file
     /// </summary>
     public class FileIOOperations
     {
@@ -75,6 +77,21 @@ namespace FileOperations
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
+            }
+        }
+
+        public static void CopyFile()
+        {
+            string sourcePath = @"C:\Users\ven\source\repos\FileOperations\FileOperations\TextFile.txt";
+            string destPath = @"C:\Users\ven\source\repos\FileOperations\FileOperations\TextFile1.txt";
+            try
+            {
+                File.Copy(sourcePath, destPath, true);
+                Console.WriteLine("file is copied successfully");
+            }
+            catch (IOException iox)
+            {
+                Console.WriteLine(iox.Message);
             }
         }
     }
