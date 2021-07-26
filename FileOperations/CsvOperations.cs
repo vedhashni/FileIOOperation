@@ -9,7 +9,7 @@ using CsvHelper;
 
 namespace FileOperations
 {
-    class CsvOperations
+   public class CsvOperations
     {
         public static string importFilePath = @"C:\Users\ven\source\repos\FileOperations\FileOperations\csvdata.csv";
         //Read Content of CSV File and Print

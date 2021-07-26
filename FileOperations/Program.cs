@@ -45,6 +45,11 @@ namespace FileOperations
                     FileIOOperations.WriteUsingStreamWriter();
                     break;
 
+                case 8:
+
+                    CsvOperations.CsvSerailize();
+                    break;
+
                 default:
                     break;
 
