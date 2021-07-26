@@ -11,6 +11,8 @@ namespace FileOperations
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to FileIOOPerations");
+            string path = @"C:\Users\ven\source\repos\FileOperations\FileOperations\TextFile.txt";
+            FileIOOperations.FileExists(path);
         }
     }
 }
