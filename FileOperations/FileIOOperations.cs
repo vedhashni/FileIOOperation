@@ -13,6 +13,8 @@ namespace FileOperations
     /// Read All Text in File
     /// Copy a file
     /// Delete A file
+    /// Read file using Stream Reader
+    /// Write file using Stream Writer
     /// </summary>
     public class FileIOOperations
     {
@@ -139,6 +141,34 @@ namespace FileOperations
             {
                 Console.WriteLine(ex.Message);
             }
+        }
+
+        public static void WriteUsingStreamWriter()
+        {
+            string streamWritePath = @"C:\Users\ven\source\repos\FileOperations\FileOperations\TextFile.txt";
+            FileStream stream = null;
+            try
+            {
+                stream = new FileStream(streamWritePath, FileMode.OpenOrCreate);
+                using (StreamWriter writer = new StreamWriter(stream, Encoding.UTF8))
+                {
+                    writer.WriteLine("Hi!!! Welcome");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                if (stream != null)
+                {
+                    stream.Dispose();
+                }
+            }
+            string readText = File.ReadAllText(streamWritePath);
+            Console.WriteLine(readText);
+
         }
     }
 }

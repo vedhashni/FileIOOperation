@@ -41,6 +41,10 @@ namespace FileOperations
                     FileIOOperations.ReadFromStreamReader();
                     break;
 
+                case 7:
+                    FileIOOperations.WriteUsingStreamWriter();
+                    break;
+
                 default:
                     break;
 
