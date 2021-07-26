@@ -9,14 +9,14 @@ using CsvHelper;
 
 namespace FileOperations
 {
-    class CsvOperations
+    public class CsvOperations
     {
-        public static string importFilePath = @"C:\Users\ven\source\repos\FileOperations\FileOperations\csvdata.csv";
+        //public static string importFilePath = @"C:\Users\ven\source\repos\FileOperations\FileOperations\csvdata.csv";
         //Read Content of CSV File and Print
         public static void CsvDeSerailize()
         {
             //Initialization
-
+            string importFilePath = @"C:\Users\ven\source\repos\FileOperations\FileOperations\csvdata.csv";
             using var reader = new StreamReader(importFilePath);
             using var csv = new CsvReader(reader, CultureInfo.InvariantCulture);
             var result = csv.GetRecords<Person>().ToList();
@@ -37,7 +37,8 @@ namespace FileOperations
             {
             new Person("Gayatri","gaya@yahoo.com",9894527257,"India") };
             csvWrite.WriteRecords(data);
-            csvWrite.NextRecordAsync();
+            csvWrite.NextRecord();
+            CsvDeSerailize();
         }
     }
 }

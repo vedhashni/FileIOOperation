@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CsvHelper;
 
 namespace FileOperations
 {
@@ -43,6 +44,15 @@ namespace FileOperations
 
                 case 7:
                     FileIOOperations.WriteUsingStreamWriter();
+                    break;
+
+                case 8:
+
+                    CsvOperations.CsvSerailize();
+
+                    break;
+                case 9:
+                    JsonOperations.ReadJsonAndWriteToCSV();
                     break;
 
                 default:

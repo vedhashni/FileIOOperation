@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FileOperations
 {
-    class Person
+    public class Person
     {
         public string name { get; set; }
         public string email { get; set; }
