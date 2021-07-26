@@ -9,6 +9,7 @@ namespace FileOperations
 {
     /// <summary>
     /// Checking File exists or not
+    /// Read All lines in the File
     /// </summary>
     public class FileIOOperations
     {
@@ -31,6 +32,27 @@ namespace FileOperations
             {
                 Console.WriteLine(ex.Message);
                 return false;
+            }
+        }
+
+        public static void ReadAllLinesInFile()
+        {
+            try
+            {
+                string[] lines;
+                string path = @"C:\Users\ven\source\repos\FileOperations\FileOperations\TextFile.txt";
+                lines = File.ReadAllLines(path);
+                if (lines.Length != 0)
+                {
+                    foreach (var i in lines)
+                    {
+                        Console.WriteLine(i + " ");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
             }
         }
     }

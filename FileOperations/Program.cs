@@ -12,7 +12,24 @@ namespace FileOperations
         {
             Console.WriteLine("Welcome to FileIOOPerations");
             string path = @"C:\Users\ven\source\repos\FileOperations\FileOperations\TextFile.txt";
-            FileIOOperations.FileExists(path);
+
+            int option = Convert.ToInt32(Console.ReadLine());
+
+            switch (option)
+            {
+                case 1:
+                    FileIOOperations.FileExists(path);
+                    break;
+
+                case 2:
+                    FileIOOperations.ReadAllLinesInFile();
+                    break;
+
+                default:
+                    break;
+
+            }
+
         }
     }
 }
