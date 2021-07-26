@@ -33,6 +33,10 @@ namespace FileOperations
                     FileIOOperations.CopyFile();
                     break;
 
+                case 5:
+                    FileIOOperations.DeleteFile();
+                    break;
+
                 default:
                     break;
 

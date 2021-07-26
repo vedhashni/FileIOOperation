@@ -12,6 +12,7 @@ namespace FileOperations
     /// Read All lines in the File
     /// Read All Text in File
     /// Copy a file
+    /// Delete A file
     /// </summary>
     public class FileIOOperations
     {
@@ -43,6 +44,7 @@ namespace FileOperations
             {
                 string[] lines;
                 string path = @"C:\Users\ven\source\repos\FileOperations\FileOperations\TextFile.txt";
+                FileExists(path);
                 lines = File.ReadAllLines(path);
                 if (lines.Length != 0)
                 {
@@ -64,6 +66,7 @@ namespace FileOperations
             {
                 string text;
                 string path = @"C:\Users\ven\source\repos\FileOperations\FileOperations\TextFile.txt";
+                FileExists(path);
                 text = File.ReadAllText(path);
                 if (text.Length != 0)
                 {
@@ -92,6 +95,27 @@ namespace FileOperations
             catch (IOException iox)
             {
                 Console.WriteLine(iox.Message);
+            }
+        }
+
+        public static void DeleteFile()
+        {
+            try
+            {
+                string delFile = @"C:\Users\ven\source\repos\FileOperations\FileOperations\TextFile1.txt";
+                if (FileExists(delFile))
+                {
+                    File.Delete(delFile);
+                    Console.WriteLine("File deleted");
+                }
+                else
+                {
+                    Console.WriteLine("File not found!!!");
+                }
+            }
+            catch (IOException ex)
+            {
+                Console.WriteLine(ex.Message);
             }
         }
     }
